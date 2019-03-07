@@ -15,5 +15,18 @@ $( document ).ready(function() {
 		}).done(function(data) {
 			$("#resultExponentiation").html(data);
 		});
-	});
+	}); 
+	$("#performPlus").on('click', function() {
+		// Получаем занчения полей
+		var argumentFirst = $("#argumentFirstForPlus").val();
+		var argumentSecond = $("#argumentSecondForPlus").val();
+		var type = "plus";
+
+		// Отправляем post запрос для выполнения операции и получения ответа
+		$.post(path + "arithmetic-operations/perform-operation/",{
+			argumentFirst: argumentFirst, argumentSecond: argumentSecond, type: type
+		}).done(function(data) {
+			$("#resultPlus").html(data);
+		});
+	}); 
 });

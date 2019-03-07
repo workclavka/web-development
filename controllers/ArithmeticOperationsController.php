@@ -50,6 +50,30 @@ class ArithmeticOperationsController extends Controller {
 				echo $resultExponentiation;
 				break;
 			
+			case 'plus': # Операция возведения в степень 
+
+				# Получаем данные
+				$argumentFirst = (isset($_POST['argumentFirst'])) ? $_POST['argumentFirst'] : null;
+				$argumentSecond = (isset($_POST['argumentSecond'])) ? $_POST['argumentSecond'] : null;
+
+				# Производим проверки на наличие данных
+				if (empty($argumentFirst) && empty($argumentSecond)) {
+					echo "Заполните все поля";
+					break;
+				} elseif (empty($argumentFirst)) {
+					echo "Заполните поле для первого аргумента";
+					break;
+				} elseif (empty($argumentSecond)) {
+					echo "Заполните поле для второго аргумента";
+					break;
+				}
+				# Расчитваем сумму чисел
+				$resultPlus = $argumentFirst + $argumentSecond;
+
+				# Выводим результат
+				echo $resultPlus;
+				break;
+
 			default:
 				echo "Неудалось произвести расчет. Обратитесь в службу технической поддержки";
 				break;
