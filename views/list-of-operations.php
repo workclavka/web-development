@@ -15,6 +15,11 @@
 						Степень
 					</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="plus-tab" data-toggle="tab" href="#plus" role="tab" aria-controls="plus" aria-selected="false">
+						Сложение
+					</a>
+				</li>
 			</ul>
 			<div class="tab-content" id="arithmeticOperationsTabContent">
 				<div class="tab-pane fade show active" id="exponentiation" role="tabpanel" aria-labelledby="exponentiation-tab">
@@ -27,7 +32,6 @@
 					<p>
 						<b>Вы можете попробовать вычислить степень.</b>
 					</p>
-
 					<div class="row">
 						<div class="col-md-1"></div>
 						<div class="col-md-1">
@@ -42,10 +46,28 @@
 						<div class="col-md-1">
 							<button id="performExponentiation">=</button>
 						</div>
-						<div class="col-md-9"><b id="resultExponentiation"><b></div>
+						<div class="col-md-9"><b id="resultExponentiation"></b></div> 
 					</div>
-				
-					
+				</div>
+				<div class="tab-pane fade" id="plus" role="tabpanel" aria-labelledby="plus-tab">
+					<p>
+						Сложе́ние (часто обозначается символом плюса «+») — арифметическое действие. Сложение есть объединение исчислимых объектов в одно целое. Результатом сложения чисел a и  b является число, называемое суммой[стиль] чисел  a и b  и обозначаемое a+b[2].
+					</p>
+					<p>
+						<b>Вы можете попробовать сложить два числа</b>
+					</p>
+					<div class="row">
+						<div class="col-md-2">
+							<input type="text" name="argumentFirst" id="argumentFirstForPlus">
+						</div>
+						<div class="col-md-2">
+							<input type="text" name="argumentSecond" id="argumentSecondForPlus">
+						</div>
+						<div class="col-md-1">
+							<button id="performPlus">=</button>
+						</div>
+						<div class="col-md-7"><b id="resultPlus"></b></div>
+					</div>
 				</div>
 			</div>
 		</div>
