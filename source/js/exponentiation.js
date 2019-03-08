@@ -15,7 +15,7 @@ $( document ).ready(function() {
 		}).done(function(data) {
 			$("#resultExponentiation").html(data);
 		});
-	}); 
+	});
 	$("#performPlus").on('click', function() {
 		// Получаем занчения полей
 		var argumentFirst = $("#argumentFirstForPlus").val();
@@ -28,5 +28,24 @@ $( document ).ready(function() {
 		}).done(function(data) {
 			$("#resultPlus").html(data);
 		});
-	}); 
+	});
+
+
+
+	$("#performDivision").on('click', function() {
+		// Получаем занчения полей
+		var divisionFirstNum = $("#argumentFirstForDivision").val();
+		var divisionSecondNum = $("#argumentSecondForDivision").val();
+		var type = "division";
+
+		// Отправляем post запрос для выполнения операции и получения ответа
+		$.post(path + "arithmetic-operations/perform-operation/",{
+			divisionFirstNum: divisionFirstNum, divisionSecondNum: divisionSecondNum, type: type
+		}).done(function(data) {
+			$("#resultDivision").html(data);
+		});
+	});
+
+
+
 });
