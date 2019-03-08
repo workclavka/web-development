@@ -20,6 +20,11 @@
 						Сложение
 					</a>
 				</li>
+				<li class="nav-item">
+					<a class="nav-link" id="plus-tab" data-toggle="tab" href="#division" role="tab" aria-controls="division" aria-selected="false">
+						Деление
+					</a>
+				</li>
 			</ul>
 			<div class="tab-content" id="arithmeticOperationsTabContent">
 				<div class="tab-pane fade show active" id="exponentiation" role="tabpanel" aria-labelledby="exponentiation-tab">
@@ -46,7 +51,7 @@
 						<div class="col-md-1">
 							<button id="performExponentiation">=</button>
 						</div>
-						<div class="col-md-9"><b id="resultExponentiation"></b></div> 
+						<div class="col-md-9"><b id="resultExponentiation"></b></div>
 					</div>
 				</div>
 				<div class="tab-pane fade" id="plus" role="tabpanel" aria-labelledby="plus-tab">
@@ -69,8 +74,30 @@
 						<div class="col-md-7"><b id="resultPlus"></b></div>
 					</div>
 				</div>
+
+				<div class="tab-pane fade" id="division" role="tabpanel" aria-labelledby="division-tab">
+					<p>
+						Арифметическое действие, по которому узнаётся, сколько раз одно число содержится в другом. Разделить — это значит раздробить на части, количество частей должно равняться делителю. Разделить число а на число Ь — это значит найти такое третье число с, чтобы верным оказалось равенство: b * c = a.
+					<p>
+						<b>Вы можете попробовать разделить два числа</b>
+					</p>
+					<div class="row">
+						<div class="col-md-2">
+							<input type="text" name="divisionFirstNum" id="argumentFirstForDivision">
+						</div>
+						<div class="col-md-2">
+							<input type="text" name="divisionSecondNum" id="argumentSecondForDivision">
+						</div>
+						<div class="col-md-1">
+							<button id="performDivision">=</button>
+						</div>
+						<div class="col-md-7"><b id="resultDivision"></b></div>
+					</div>
+				</div>
+
+
 			</div>
 		</div>
 		<div class="col-md-2"></div>
-	</div>    
+	</div>
 </div>
