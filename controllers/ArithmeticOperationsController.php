@@ -50,7 +50,7 @@ class ArithmeticOperationsController extends Controller {
 				echo $resultExponentiation;
 				break;
 
-			case 'plus': # Операция возведения в степень
+			case 'plus': # Операция сложения слагаемых
 
 				# Получаем данные
 				$argumentFirst = (isset($_POST['argumentFirst'])) ? $_POST['argumentFirst'] : null;
@@ -75,7 +75,7 @@ class ArithmeticOperationsController extends Controller {
 				break;
 
 
-				case 'division': # Операция возведения в степень
+				case 'division': # Операция деления чисел
 
 					# Получаем данные
 					$divisionFirstNum = (isset($_POST['divisionFirstNum'])) ? $_POST['divisionFirstNum'] : null;
@@ -92,7 +92,7 @@ class ArithmeticOperationsController extends Controller {
 						echo "Заполните поле для второго аргумента";
 						break;
 					}
-					# Расчитваем сумму чисел
+					# Расчитываем частное
 					$resultDivision = $divisionFirstNum / $divisionSecondNum;
 
 					# Выводим результат
