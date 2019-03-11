@@ -4,7 +4,7 @@
  * Main class
  */
 class ArithmeticOperationsController extends Controller {
-	
+
 
 	public function __construct()
 	{
@@ -26,7 +26,7 @@ class ArithmeticOperationsController extends Controller {
 
 		# Выбираем опирацию которую необходимо выполнить
 		switch ($type) {
-			case 'exponentiation': # Операция возведения в степень 
+			case 'exponentiation': # Операция возведения в степень
 
 				# Получаем данные
 				$number = (isset($_POST['number'])) ? $_POST['number'] : null;
@@ -49,8 +49,8 @@ class ArithmeticOperationsController extends Controller {
 				# Выводим результат
 				echo $resultExponentiation;
 				break;
-			
-			case 'plus': # Операция возведения в степень 
+
+			case 'plus': # Операция сложения слагаемых
 
 				# Получаем данные
 				$argumentFirst = (isset($_POST['argumentFirst'])) ? $_POST['argumentFirst'] : null;
@@ -73,6 +73,33 @@ class ArithmeticOperationsController extends Controller {
 				# Выводим результат
 				echo $resultPlus;
 				break;
+
+
+				case 'division': # Операция деления чисел
+
+					# Получаем данные
+					$divisionFirstNum = (isset($_POST['divisionFirstNum'])) ? $_POST['divisionFirstNum'] : null;
+					$divisionSecondNum = (isset($_POST['divisionSecondNum'])) ? $_POST['divisionSecondNum'] : null;
+
+					# Производим проверки на наличие данных
+					if (empty($divisionFirstNum) && empty($divisionSecondNum)) {
+						echo "Заполните все поля";
+						break;
+					} elseif (empty($divisionFirstNum)) {
+						echo "Заполните поле для первого аргумента";
+						break;
+					} elseif (empty($divisionSecondNum)) {
+						echo "Заполните поле для второго аргумента";
+						break;
+					}
+					# Расчитываем частное
+					$resultDivision = $divisionFirstNum / $divisionSecondNum;
+
+					# Выводим результат
+					echo $resultDivision;
+					break;
+
+
 
 			default:
 				echo "Неудалось произвести расчет. Обратитесь в службу технической поддержки";
